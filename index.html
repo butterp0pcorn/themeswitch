@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DARK MODE</title>
+    <link rel="stylesheet" href="style.css" />
+     <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  /> 
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet"> 
+  <!-- <link rel="stylesheet" href="remixion.css"> -->
+  </head>
+  <body>
+    <nav class="navbar container">
+    <a href="#"><img src="images/logo.png" class="logo" /></a>
+    <input type="checkbox" id="toggler" >
+      <label for="toggler"><i class="ri-menu-line" onclick ='changeMenuColor()'></i></label>   
+      <div class="menu">
+        <ul class="list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">What's New</a></li>
+          <li><a href="#">Contact</a></li>
+          <li></li>
+          </ul>
+        </div>
+        </nav>
+        <ul>
+          <li onclick ='changeColour()'><i class="themeSwitch"></i></li>
+       </ul>
+      <div class="content">
+        <div class="textBox">
+          <h2>It's not just Coffee<br/>It's <span>Starbucks</span></h2>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam eos
+            in, nesciunt cumque, expedita explicabo corporis quasi quia error
+            accusantium deserunt delectus soluta dolorem sapiente blanditiis et
+            qui minima magni.
+          </p>
+          <a href="#">Learn More</a>
+        </div>
+        <div class="imgBox">
+          <img src="images/img1.png" alt="" />
+      </div>
+        
+        </div>
+      
+      <ul class="sci">
+        <li>
+          <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        </li>
+      </ul>
+  
+    <script>
+      let themeSwitch = document.querySelector(".themeSwitch");
+      let body = document.querySelector("body");
+      themeSwitch.onclick = function () {
+        themeSwitch.classList.toggle("active");
+        body.classList.toggle("dark");
+      };
+      let color = 'black';
+      function changeMenuColor()
+      {
+        if(color==='black')
+        {
+          document.querySelector(".ri-menu-line").style.color='white';
+          color='white';
+      }
+      else
+      {
+        document.querySelector(".ri-menu-line").style.color='black'
+        color='black'   
+      }
+      }
+      let colour = 'white';
+      function changeColour()
+      {
+        if(colour==='#113828')
+        {
+          document.querySelector('.navbar.container').style.backgroundColor='white';
+          colour='white';
+      }
+      else
+      {
+        document.querySelector('.navbar.container').style.backgroundColor='#113828';
+        colour='#113828'   
+      }
+      }
+       // 
+    </script>
+  </body>
+</html>
